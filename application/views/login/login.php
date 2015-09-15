@@ -7,6 +7,7 @@
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <?php
+    echo link_tag('http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700');
     echo link_tag('assets/css/bootstrap.min.css');
     echo link_tag('assets/css/font-awesome.min.css');
     echo link_tag('assets/css/smartadmin-production.min.css');
@@ -43,15 +44,16 @@
             </footer>
         </div>
         <p class="font-xs margin-top-5">
-            Copyright Classic Kitchen 2014-2020.
+            Copyright ClassicKitchen 2014-2020.
         </p>
     </form>
 </div>
+<!--================================================== -->
 <?php
-    echo script_tag('assets/js/jquery.js');
-    echo script_tag('assets/js/plugin/pace/pace.min.js');
-    echo script_tag('assets/js/plugin/jquery-validate/jquery.validate.min.js');
-    echo script_tag('assets/js/login.js');
+echo script_tag('assets/js/jquery-1.11.1.min.js');
+echo script_tag('assets/js/plugin/pace/pace.min.js');
+echo script_tag('assets/js/plugin/jquery-validate/jquery.validate.min.js');
+echo script_tag('assets/js/login/login.js');
 ?>
 <script type="text/javascript">
     $(document).ready( function(){

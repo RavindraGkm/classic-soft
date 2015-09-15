@@ -7,11 +7,12 @@
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <?php
-        echo link_tag('assets/css/bootstrap.min.css');
-        echo link_tag('assets/css/font-awesome.min.css');
-        echo link_tag('assets/css/smartadmin-production.min.css');
-        echo link_tag('assets/css/smartadmin-skins.min.css');
-        echo link_tag('assets/css/demo.min.css');
+    echo link_tag('http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700');
+    echo link_tag('assets/css/bootstrap.min.css');
+    echo link_tag('assets/css/font-awesome.min.css');
+    echo link_tag('assets/css/smartadmin-production.min.css');
+    echo link_tag('assets/css/smartadmin-skins.min.css');
+    echo link_tag('assets/css/demo.min.css');
     ?>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -19,7 +20,9 @@
 <body class="">
 <header id="header">
     <div id="logo-group">
-        <span id="logo"> <img src="assets/img/logo.png" alt="SmartAdmin"> </span>
+        <span id="logo">
+            <?php echo img(array('src'=>'assets/img/logo.png','alt'=>'SmartAdmin')); ?>
+        </span>
     </div>
     <div class="pull-right">
         <div id="logout" class="btn-header transparent pull-right">
@@ -95,6 +98,7 @@
                                         <th data-class="expand"><i class="fa fa-fw fa-user text-muted hidden-md hidden-sm hidden-xs"></i>CLIENT NAME</th>
                                         <th data-hide="phone"><i class="fa fa-fw fa-mobile text-muted hidden-md hidden-sm hidden-xs"></i> CONTACT</th>
                                         <th data-hide="phone,tablet"><i class="fa fa-fw fa-map-marker txt-color-blue hidden-md hidden-sm hidden-xs"></i> ADDRESS</th>
+                                        <th data-hide="phone,tablet"><i class="fa txt-color-blue hidden-md hidden-sm hidden-xs"></i> ACTION</th>
                                     </tr>
                                     </thead>
                                     <tbody id="client-data-json"></tbody>
@@ -116,39 +120,20 @@
 </div>
 <!--================================================== -->
 <?php
-    echo script_tag('assets/js/jquery.js');
-    echo script_tag('assets/js/plugin/pace/pace.min.js');
-    echo script_tag('assets/js/app.config.js');
-    echo script_tag('assets/js/bootstrap/bootstrap.min.js');
-    echo script_tag('assets/js/app.min.js');
-    echo script_tag('assets/js/plugin/datatables/jquery.dataTables.min.js');
-    echo script_tag('assets/js/plugin/datatable-responsive/datatables.responsive.min.js');
-    echo script_tag('assets/js/plugin/select2/select2.min.js');
-    echo script_tag('assets/js/clients/show_clients.js');
+echo script_tag('assets/js/jquery-1.11.1.min.js');
+echo script_tag('assets/js/plugin/pace/pace.min.js');
+echo script_tag('assets/js/app.config.js');
+echo script_tag('assets/js/bootstrap/bootstrap.min.js');
+echo script_tag('assets/js/app.min.js');
+echo script_tag('assets/js/plugin/datatables/jquery.dataTables.min.js');
+echo script_tag('assets/js/plugin/datatable-responsive/datatables.responsive.min.js');
+echo script_tag('assets/js/plugin/select2/select2.min.js');
+echo script_tag('assets/js/clients/show_clients.js');
 ?>
 <script type="text/javascript">
     $(document).ready(function(){
         new CKE.Showclients();
     });
 </script>
-
-
-<!-- Your GOOGLE ANALYTICS CODE Below -->
-<script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-        var ga = document.createElement('script');
-        ga.type = 'text/javascript';
-        ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(ga, s);
-    })();
-</script>
-
 </body>
-
 </html>

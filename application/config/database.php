@@ -75,10 +75,14 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
+//	'hostname' => 'classickitchen.db.12055437.hostedresource.com',
+//	'username' => 'classickitchen',
+//	'password' => 'Whypass@123',
+//	'database' => 'classickitchen',
 	'hostname' => 'localhost',
 	'username' => 'root',
-	'password' => '',
-	'database' => 'classickitchen',
+	'password' => 'root',
+	'database' => 'classic_equ',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

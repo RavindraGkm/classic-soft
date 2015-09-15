@@ -2,6 +2,7 @@ var CKE = CKE || {};
 
 CKE.Login = function (base_url) {
     this.base_url=base_url;
+    //console.log(base_url+" chusasuyhaud");
     this.initialize();
 }
 CKE.Login.prototype={
@@ -12,7 +13,7 @@ CKE.Login.prototype={
         var self=this;
         $('#btn-signin').click(function(){
             $.ajax({
-            url: "login-check",
+            url: "logins/login-check",
             type: "POST",
             dataType: "JSON",
             data:{
@@ -22,7 +23,7 @@ CKE.Login.prototype={
             beforeSend: function(data) {
                 $("#btn-signin").html('Processing...');
             },
-            error: function(){
+            error: function(data){
                 console.log(data);
             },
             success: function (data) {

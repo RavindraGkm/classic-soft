@@ -7,14 +7,15 @@
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <?php
-        echo link_tag('http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700');
-        echo link_tag('assets/css/bootstrap.min.css');
-        echo link_tag('assets/css/font-awesome.min.css');
-        echo link_tag('assets/css/smartadmin-production.min.css');
-        echo link_tag('assets/css/smartadmin-skins.min.css');
-        echo link_tag('assets/css/demo.min.css');
+    echo link_tag('http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700');
+    echo link_tag('assets/css/bootstrap.min.css');
+    echo link_tag('assets/css/font-awesome.min.css');
+    echo link_tag('assets/css/smartadmin-production.min.css');
+    echo link_tag('assets/css/smartadmin-skins.min.css');
+    echo link_tag('assets/css/demo.min.css');
     ?>
 <body class="">
+<input type="hidden" id="client_id" value="<?php echo $client_id; ?>" />
 <header id="header">
     <div id="logo-group">
         <span id="logo"> <img src="<?php echo base_url('assets/img/logo.png')?>" alt="SmartAdmin"> </span>
@@ -64,7 +65,7 @@
 <div id="main" role="main">
     <div id="ribbon">
         <ol class="breadcrumb">
-            <li>Home></li><li>Add</li><li>Add Clients</li>
+            <li>Home></li><li>Edit</li><li>Edit Clients</li>
         </ol>
     </div>
     <div id="content">
@@ -72,7 +73,7 @@
             <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
                 <h1 class="page-title txt-color-blueDark">
                     <i class="fa-fw fa fa-pencil-square-o"></i>Add
-                    <span>> Add Clients </span>
+                    <span>> Edit Clients </span>
                 </h1>
             </div>
         </div>
@@ -82,7 +83,7 @@
                     <div class="jarviswidget" id="wid-id-1" data-widget-editbutton="false" data-widget-custombutton="false">
                         <header>
                             <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
-                            <h2>Clients Add</h2>
+                            <h2>Clients Edit</h2>
                         </header>
                         <div>
                             <div class="jarviswidget-editbox">
@@ -112,7 +113,7 @@
                                     </fieldset>
                                     <footer>
                                         <button type="button" class="btn btn-primary" id="btn-submit">
-                                            Add Client
+                                            Update Client Info
                                         </button>
                                     </footer>
                                 </form>
@@ -133,16 +134,15 @@
 </div>
 <!--================================================== -->
 <?php
-    echo script_tag('assets/js/jquery-1.11.1.min.js');
-    echo script_tag('assets/js/plugin/pace/pace.min.js');
-    echo script_tag('assets/js/app.config.js');
-    echo script_tag('assets/js/app.min.js');
-    echo script_tag('assets/js/notification/SmartNotification.min.js');
-    echo script_tag('assets/js/clients/add_clients.js');
+echo script_tag('assets/js/jquery-1.11.1.min.js');
+echo script_tag('assets/js/plugin/pace/pace.min.js');
+echo script_tag('assets/js/app.config.js');
+echo script_tag('assets/js/app.min.js');
+echo script_tag('assets/js/clients/edit_clients.js');
 ?>
 <script type="text/javascript">
     $(document).ready(function(){
-        new CKE.AddClients();
+        new CKE.EditClients("<?php echo base_url(); ?>");
     });
 </script>
 </body>
